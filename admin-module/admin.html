@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamHub — Admin Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="admin.html" class="nav__brand">STREAM<span>HUB</span> <small style="font-size:0.5em; opacity:0.7;">ADMIN</small></a>
+    <nav class="nav__links">
+      <a href="../index.html">User View</a>
+      <a href="admin.html">Dashboard</a>
+    </nav>
+    <div class="nav__auth" id="navAuth"></div>
+  </header>
+
+  <section class="hero">
+    <p class="hero__eyebrow">Control Panel</p>
+    <h1 class="hero__title">Content Management System</h1>
+    <p class="hero__sub">Add, inspect, or delete video streaming titles across the application.</p>
+  </section>
+
+  <div class="auth-wrap" style="max-width: 900px; margin: 0 auto 3rem auto;">
+    <div class="auth-card" style="max-width: 100%;">
+      <h2>Add New Streaming Title</h2>
+      <p class="muted">Fill in details to instantly inject new media into LocalStorage.</p>
+
+      <form id="adminAddForm" class="auth-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <label>Title
+          <input type="text" id="addTitle" required autocomplete="off">
+        </label>
+
+        <label>Category
+          <select id="addCategory" style="width:100%; padding: 0.75rem; background: #18181b; color:#fff; border: 1px solid #3f3f46; border-radius:6px; margin-top:0.4rem;" required>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Documentary">Documentary</option>
+          </select>
+        </label>
+
+        <label style="grid-column: span 2;">Description
+          <input type="text" id="addDesc" required autocomplete="off">
+        </label>
+
+        <label>Video URL (.mp4)
+          <input type="url" id="addUrl" placeholder="https://..." required>
+        </label>
+
+        <label>Poster Path / Image URL
+          <input type="text" id="addPoster" placeholder="images/c01.jpg" required>
+        </label>
+
+        <button type="submit" class="btn btn--active auth-submit" style="grid-column: span 2; margin-top: 0.5rem;">Add Title to System</button>
+      </form>
+    </div>
+  </div>
+
+  <section style="max-width: 1100px; margin: 0 auto 5rem auto; padding: 0 1.5rem;">
+    <h2 style="margin-bottom: 1.5rem; font-family: 'Sora', sans-serif;">Existing Catalog Items</h2>
+    <div style="overflow-x: auto;">
+      <table id="adminTable" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 2px solid #3f3f46; color: #a1a1aa; font-size: 0.9rem;">
+            <th style="padding: 0.75rem;">ID</th>
+            <th style="padding: 0.75rem;">Title</th>
+            <th style="padding: 0.75rem;">Category</th>
+            <th style="padding: 0.75rem;">Poster</th>
+            <th style="padding: 0.75rem; text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody">
+          <!-- Dynamically populated rows -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>StreamHub — Admin Module. Data changes are synchronized globally in browser LocalStorage.</p>
+  </footer>
+
+<script src="js/data.js"></script>
+<script src="../js/common.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamHub — Sign Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="login.html" class="nav__brand">STREAM<span>HUB</span></a>
+  </header>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Create your account</h1>
+      <p class="muted">Get personalized recommendations from the start.</p>
+
+      <p id="authError" class="auth-error" hidden></p>
+
+      <form id="signupForm" class="auth-form">
+        <label>Name
+          <input type="text" id="name" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" id="email" required autocomplete="email">
+        </label>
+        <label>Password
+          <input type="password" id="password" required autocomplete="new-password" minlength="4">
+        </label>
+        <button type="submit" class="btn btn--active auth-submit">Sign up</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </div>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

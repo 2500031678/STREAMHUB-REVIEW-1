@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamHub — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__brand">STREAM<span>HUB</span></div>
+    <nav class="nav__links">
+      <a href="index.html">Browse</a>
+      <a href="watchlist.html">My List</a>
+    </nav>
+    <div class="nav__auth" id="navAuth"></div>f
+  </header>
+
+  <section class="hero">
+    <p class="hero__eyebrow">Now streaming</p>
+    <h1 class="hero__title">Something new,<br>every shelf.</h1>
+    <p class="hero__sub">Browse by category, pick up where you left off, and get recommendations built from what you actually watch.</p>
+  </section>
+
+  <div class="search-bar">
+    <input type="search" id="searchInput" placeholder="Search titles..." autocomplete="off">
+  </div>
+
+  <div class="tabs" id="categoryTabs"></div>  
+
+  <div id="shelves"></div>
+
+  <footer class="footer">
+    <p>StreamHub — a practice project. Videos are public-domain sample clips; data is stored locally in your browser.</p>
+  </footer>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
